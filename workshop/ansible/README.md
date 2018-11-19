@@ -106,4 +106,8 @@ ssh_key value comes from `cat /Users/nicolas/.ssh/ansible-cluster-key.pub`
         Environment: Production`
 ```
 
+Then play book and have a coffee !
 
+```
+ansible-playbook create.yaml
+```
