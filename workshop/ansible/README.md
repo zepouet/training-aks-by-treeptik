@@ -16,7 +16,6 @@ sudo pip install ansible[azure]
 
 # Create a resource-group
 
-On the machine with *az* client configured.
 ```
 az ad sp create-for-rbac --name ansible-rg
 ```
