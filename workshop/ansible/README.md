@@ -5,7 +5,7 @@ Créer une Droplet CentOS 7.4 ou 7.5
 # Install pre-requisite packages
 
 ```
-sudo yum check-update; sudo yum install -y gcc libffi-devel python-devel openssl-devel epel-release
+sudo yum check-update; sudo yum install -y gcc libffi-devel python-devel openssl-devel epel-release git
 sudo yum install -y python-pip python-wheel
 ```
 
@@ -23,11 +23,11 @@ az ad sp create-for-rbac --name ansible-rg
 Then 
 ```
 {
-  "appId": "0cf730b5-9e49-44a8-b163-2626814d1206",
+  "appId": "...",
   "displayName": "ansible-rg",
   "name": "http://ansible-rg",
-  "password": "1425915e-d539-407d-86e1-c92b68f8724a",
-  "tenant": "061a4443-8d7a-415a-91ad-104e12ff3359"
+  "password": "...",
+  "tenant": "..."
 }
 ```
 
@@ -75,8 +75,8 @@ ssh_key value comes from `cat /Users/nicolas/.ssh/ansible-cluster-key.pub`
     aks_name: ansibleAKSCluster
     username: azureuser
     ssh_key: "..."
-    client_id: "0cf730b5-9e49-44a8-b163-2626814d1206"
-    client_secret: "1425915e-d539-407d-86e1-c92b68f8724a"
+    client_id: "..."
+    client_secret: "..."
   tasks:
   - name: Create resource group
     azure_rm_resourcegroup:
