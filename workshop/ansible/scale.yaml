@@ -6,9 +6,9 @@
     location: westeurope
     aks_name: ansibleAKSCluster
     username: azureuser
-    ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDezVOiV8jH1vwGjnfcOyxZPVWH3eEf2hD5BgBFdR20+Xrb0p8STtRx6snA231ClM7+CuGrXAJqEYHmhG8srq5vyerevmK8hBMIkeLTSU4wlGTV69Xjv1Ic/a8/0SXRsFfx7ivnd2A7+fJenuL3yb9BEd26na61V2obiZANkyYUT+dq18y9XyeptIQf76M3NlYB9tYPOhBRTa/swQMhV4s/KRTigF4osqJxwq5h9IgrOiedmNu28YFn0EFDi3YCLoWr47triypQHN/noM5Q+U5JlAzJJXHE+VARrKLVhVWH7nsL7ZoVy3COq9EdmT1xPSZFXfZQMzZmoMH4ekRNwCZfM4qSGtrqpTb0U3VZVfCPdQmqOdA81X5jviFcLEpnAgrk6LakT+k0dLQ1oN0iFJ2YxAdPOrYT/g7S3RR9IejjThwqyBDZDnhaoPLsjzvtZwJhwYHQOf/Vp0DhoGB53XlAhjixrwlGkoCb9/xBxgwc07KasdWIB/T6Pc3oGgCrJWkfPorrAXkdB1+s3ry6oQCVMlh9WxtdilMV/J2arHg0FgHvD0u2Jzy0wxBtHq9jBDMPs52N8M5cbdjAkdVt45EjRWz47w8ROml2Bi+MTz3M84nyb6jWRSPQgCz+SeEW8Ut6estXOQqMUch6q15DAq6OLNiXDH+wVvcCjSkWI7WCbQ== zepouet@gmail.com"
-    client_id: "e986e5b2-8496-47fc-a46a-25d732565383"
-    client_secret: "753037c3-3196-4e6e-ada8-2e676c11063b"
+    ssh_key: "..."
+    client_id: "..."
+    client_secret: "..."
   tasks:
   - name: Scaling an existed AKS cluster
     azure_rm_aks:
