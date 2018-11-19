@@ -146,3 +146,34 @@ Edit the file **scale.yaml** to add information Ids
             count: 3
             vm_size: Standard_D2_v2
 ```
+
+Then play book and have a coffee !
+
+```
+ansible-playbook scale.yaml
+```
+
+# Delete the cluster
+
+Edit the file **delete.yaml** if needed
+
+```
+- name: Delete a managed Azure Container Services (AKS) cluster
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: ansibleSP
+    aks_name: ansibleAKSCluster
+  tasks:
+  - name:
+    azure_rm_aks:
+      name: "{{ aks_name }}"
+      resource_group: "{{ resource_group }}"
+      state: absent
+```
+
+Then play book and have a coffee !
+
+```
+ansible-playbook delete.yaml
+```
