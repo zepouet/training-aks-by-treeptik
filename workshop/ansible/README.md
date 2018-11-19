@@ -61,6 +61,9 @@ secret=<security-principal-password>
 tenant=<security-principal-tenant>
 ```
 
+To display your subscription id, `az account list --output table`
+*client_id* value is the *appId* value given with ressource group.
+
 ## Edit the YAML
 
 ssh_key value comes from `cat /Users/nicolas/.ssh/ansible-cluster-key.pub`
