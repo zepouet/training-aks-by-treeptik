@@ -111,3 +111,38 @@ Then play book and have a coffee !
 ```
 ansible-playbook create.yaml
 ```
+
+# Scale the cluster
+
+Edit the file **scale.yaml** to add information Ids
+
+```
+- name: Scale AKS cluster
+  hosts: localhost
+  connection: local
+  vars:
+    resource_group: ansibleSP
+    location: westeurope
+    aks_name: ansibleAKSCluster
+    username: azureuser
+    ssh_key: "..."
+    client_id: "..."
+    client_secret: "..."
+  tasks:
+  - name: Scaling an existed AKS cluster
+    azure_rm_aks:
+        name: "{{ aks_name }}"
+        location: "{{ location }}"
+        resource_group: "{{ resource_group }}"
+        dns_prefix: "{{ aks_name }}"
+        linux_profile:
+          admin_username: "{{ username }}"
+          ssh_key: "{{ ssh_key }}"
+        service_principal:
+          client_id: "{{ client_id }}"
+          client_secret: "{{ client_secret }}"
+        agent_pool_profiles:
+          - name: default
+            count: 3
+            vm_size: Standard_D2_v2
+```
