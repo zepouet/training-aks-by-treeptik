@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    resource_group: ansibleSP
+    resource_group: ansible-rg
     aks_name: ansibleAKSCluster 
   tasks:
   - name: 
