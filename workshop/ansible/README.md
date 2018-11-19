@@ -70,7 +70,7 @@ ssh_key value comes from `cat /Users/nicolas/.ssh/ansible-cluster-key.pub`
   hosts: localhost
   connection: local
   vars:
-    resource_group: ansible-rg2
+    resource_group: ansible-rg
     location: westeurope
     aks_name: ansibleAKSCluster
     username: azureuser
